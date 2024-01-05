@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>MVC Architecture Example</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-2xl font-bold">MVC Architecture Example</h1>
+        <p class="text-sm">A basic API REST using MVC Architecture</p>
+    </header>
+
+    <main class="container mx-auto mt-4">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-2">MVC Architecture Schema</h2>
+            <img src="//static/mvc.jpg" alt="MVC Architecture Schema" class="max-w-full">
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-2">Getting Started</h2>
+            <p class="mb-4">To start the app, use the following command:</p>
+            <pre class="bg-gray-200 p-4 rounded-md">
+                <code class="text-sm">flask --app main run</code>
+            </pre>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-2">Routes</h2>
+            <p class="mb-4">If you are using Visual Studio Code, you can test this app by installing the extension <strong>REST Client - Huachao Mao</strong>, which allows you to simply make HTTP requests.</p>
+
+            <p class="mb-4">These are the routes that are in the app, providing CRUD endpoints:</p>
+
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-semibold">Get all movies</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md">
+                        <code class="text-sm">GET http://127.0.0.1:5000/movies HTTP/1.1</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Create Movie</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md">
+                        <code class="text-sm">POST http://127.0.0.1:5000/movies HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Sample title movie",
+    "genres": ["terror", "fun"]
+}</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Update movie</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md">
+                        <code class="text-sm">PUT http://127.0.0.1:5000/movies/{id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Sample title movie2",
+    "genres": ["terror"]
+}</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Get one movie</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md">
+                        <code class="text-sm">GET http://127.0.0.1:5000/movies/{id} HTTP/1.1</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Delete one movie</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md">
+                        <code class="text-sm">DELETE http://127.0.0.1:5000/movies/{id} HTTP/1.1</code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-500 text-white p-4 mt-8">
+        <p>&copy; 2024 MVC Architecture Example</p>
+    </footer>
+
+</body>
+
+</html>

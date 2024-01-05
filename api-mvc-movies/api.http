@@ -1,0 +1,21 @@
+GET http://127.0.0.1:5000/movies HTTP/1.1
+###
+POST http://127.0.0.1:5000/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Sample title movie",
+    "genres": ["terror", "fun"]
+}
+###
+GET http://127.0.0.1:5000/movies/56f8715a-5243-4384-b3cb-c16f39c61993 HTTP/1.1
+###
+PUT http://127.0.0.1:5000/movies/56f8715a-5243-4384-b3cb-c16f39c61993 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Sample title movie 2 edited",
+    "genres": ["Comedy"]
+}
+###
+DELETE http://127.0.0.1:5000/movies/56f8715a-5243-4384-b3cb-c16f39c61993 HTTP/1.1
