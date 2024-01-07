@@ -1,0 +1,7 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist"
+
+		// other options remain same
+	}
+}

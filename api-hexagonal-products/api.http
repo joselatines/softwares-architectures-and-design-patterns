@@ -1,0 +1,13 @@
+GET http://localhost:8000/products
+
+###
+POST http://localhost:8000/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sample title product",
+    "price": 20
+}
+###
+DELETE http://localhost:8000/products/3
+
